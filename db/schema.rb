@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_05_28_232635) do
+ActiveRecord::Schema[8.1].define(version: 2026_05_28_235843) do
+  create_table "collections", force: :cascade do |t|
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.string "name"
+    t.string "slug"
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
+
   create_table "links", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "description"
